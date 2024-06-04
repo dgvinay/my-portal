@@ -1,0 +1,13 @@
+:host {
+    width: 100%;
+}
+
+.experience-container {
+    justify-content: center;
+    justify-items: center;
+}
+
+.experience-header {
+    justify-content: center;
+    display: grid;
+}

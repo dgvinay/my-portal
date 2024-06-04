@@ -1,0 +1,109 @@
+.experience-card-container {
+    /* border: 1px grey solid; */
+    min-height: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    display: flex;
+    box-shadow: 0px 0px 9px 7px rgba(168, 159, 159, 0.2);
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.experience-card-year-block {
+    justify-items: center;
+    /* min-height: 300px; */
+    width: 80px;
+    display: grid;
+}
+
+.experience-card-end-year {
+    border: 1px grey solid;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 16px;
+}
+
+.experience-card-start-year {
+    border: 1px grey solid;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 16px;
+    align-self: center;
+}
+
+.experience-card-vertical-line {
+    width: 1px;
+    background-color: grey;
+    position: relative;
+}
+
+.experience-card-details-block {
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+.experience-card-company {
+    width: 100%;
+}
+
+.experience-card-company-exp {
+    font-size: 10pt;
+    width: 100%;
+}
+
+.experience-card-company-duration {
+    text-align: right;
+}
+
+@media only screen and (max-width: 576px) {
+    .experience-card-company-duration {
+        text-align: left;
+    }
+}
+
+.experience-card-responsibilities {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 11pt;
+    text-align: justify;
+}
+
+.experience-card-responsibilities li{
+    list-style-type: circle;
+}
+
+.experience-card-tech-stack {
+    display: flex;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    margin-top: 20px;
+}
+
+.experience-card-tech-stack-pill {
+    border-radius: 2rem;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid grey;
+    max-height: 30px;
+    margin: 3px;
+    margin-top: 5px;
+    max-width: fit-content;
+}
+
+.experience-card-tech-stack-pill:hover {
+    background-color: rgb(24, 23, 23);
+}

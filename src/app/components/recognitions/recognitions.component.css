@@ -1,0 +1,68 @@
+:host {
+    width: 100%;
+}
+
+.recognitions-container {
+    display: grid;
+    justify-content: center;
+}
+
+.recognitions-header {
+    justify-self: center;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-inner {
+    width: 80%;
+    display: grid;
+    /* margin-bottom: 36px; */
+}
+
+.carousel-item-next, .carousel-item-prev {
+    top: 0;
+    position: absolute;
+}
+
+.carousel-item img {
+    max-width: 700px;
+    height: auto;
+    width: 100%;
+}
+
+
+.carousel-caption {
+    position: static;
+}
+
+.carousel-caption h4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.carousel-caption p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 9pt;
+}
+
+@media (min-width: 768px) {
+    .carousel-item {
+        min-width: 560px;
+        min-height: 504px;
+        max-height: 504px;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        padding-bottom: 20%;
+    }
+
+}

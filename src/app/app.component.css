@@ -1,0 +1,28 @@
+
+.main-container {
+    display: flex;
+    max-width: 1100px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    position: relative;
+    top: 0;
+    height: 100%;
+}
+
+
+.header-area {
+    display: grid;
+    vertical-align: top;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    position: relative;
+    top: 0px;
+    padding: 0px !important;
+    width: 100%;
+    max-height: 90px;
+    border-bottom: 1px solid rgb(31, 30, 30);
+}
+

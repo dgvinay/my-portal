@@ -1,0 +1,53 @@
+:host {
+    width: 100%;
+
+}
+
+.home-container {
+    height: 100%;
+    align-items: center;
+    display: grid;
+}
+
+.home-left {
+    vertical-align: baseline;
+}
+
+.home-left h1 {
+    font-size: 60pt;
+    font-family: Inter;
+}
+
+.home-left h5 {
+    justify-content: space-between;
+    font-family: Inter;
+    font-size: 11pt;
+    display: flex;
+}
+
+.home-left p {
+    font-weight: 100;
+    font-size: 12pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.social-container {
+    padding-left: 150px;
+}
+
+.follow-logo {
+    height: 60px;
+    /* width:75px; */
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.follow-tooltip {
+    display: block;
+    margin-left: 10px;
+    width: 250px;
+    font-size: 8pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

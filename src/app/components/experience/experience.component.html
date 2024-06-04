@@ -1,0 +1,10 @@
+<div class="container-fluid experience-container">
+    <div class="row experience-header">
+        <h1>Work Experience</h1>
+    </div>
+
+    <app-experience-card *ngFor="let experience of experienceList.Experiences" [exp]="experience">
+    </app-experience-card>
+
+    <br />
+</div>

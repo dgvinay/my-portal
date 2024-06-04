@@ -1,0 +1,92 @@
+:host {
+    width: 100%;
+}
+
+.academics-container {
+    text-align: center;
+}
+
+.divider-icon {
+    width: 30px !important;
+    margin-right: 20px;
+}
+
+.divider-container {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.divider {
+    height: 1px;
+    background-color: grey;
+    width: 100%;
+}
+
+.certificate-container {
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 2rem;
+    padding: 10px;
+}
+
+.certificate-logo {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.certificate-details {
+    text-align: left;
+    margin-left: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.certificate-title {
+    font-size: 14pt;
+}
+
+.certificate-validity {
+    font-size: 10pt;
+}
+
+.education-container {
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 2rem;
+    padding: 15px;
+}
+
+.education-logo {
+    max-height: 100px;
+    max-width: 100px;
+    align-items: center;
+}
+
+.education-logo i{
+    font-size: 500%;
+    height: 100px;
+    width: 100px;
+}
+
+.education-details {
+    text-align: left;
+    margin-left: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.education-degree-name {
+    font-size: 14pt;
+}
+
+.education-institute-name {
+    font-size: 10pt;
+}
+
+.education-institute-name span {
+    margin-right: 10px;
+}
+
+.education-institute-name i{
+    font-size: 7pt;
+    margin-right: 10px;
+}

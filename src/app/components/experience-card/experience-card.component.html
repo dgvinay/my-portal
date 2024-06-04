@@ -1,0 +1,32 @@
+<div class="experience-card-container container-fluid">
+    <div class="experience-card-year-block">
+        <div class="experience-card-end-year">
+            {{exp.EndYear}}
+        </div>
+        <div class="experience-card-vertical-line" [ngStyle]="{'height':vlineHeight}">&nbsp;</div>
+        <div class="experience-card-start-year">
+            {{exp.StartYear}}
+        </div>
+    </div>
+    <div class="experience-card-details-block">
+        <div class="experience-card-company row">
+            <div class="experience-card-company-name row">
+                <div class="col col-lg-12"> {{exp.CompanyName}}
+                </div>
+            </div>
+            <div class="experience-card-company-exp row">
+                <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">{{exp.Designation}}</div>
+                <div class="experience-card-company-duration col col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    {{exp.Duration}}</div>
+            </div>
+        </div>
+        <div class="experience-card-responsibilities row d-sm-block d-none">
+            <ul>
+                <li *ngFor="let res of exp.Responsibilities"><span>{{res}}</span></li>
+            </ul>
+        </div>
+        <div class="experience-card-tech-stack row">
+            <span *ngFor="let skill of exp.TechnologyStack" class="experience-card-tech-stack-pill">{{skill}}</span>
+        </div>
+    </div>
+</div>

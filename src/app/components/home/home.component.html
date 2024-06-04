@@ -1,0 +1,60 @@
+<div class="home-container container-fluid">
+    <div class="row">
+        <div class="col col-md-12 col-lg-8">
+            <div class="home-left">
+                <div>
+                    <h1>Vinay Dandinashivara</h1>
+                    <h5>Architect | Problem Solver | Microsoft Technologies | AWS</h5>
+                </div>
+                <p>
+                    I am tech enthusiast with a passion for designing resilient and performant systems.
+                </p>
+            </div>
+        </div>
+        <div class="social-container col col-md-12 col-lg-4">
+            <div class="row">
+                <div class="col col-md-3 col-lg-12">
+                    <span class="follow-logo">
+                        <a href="https://www.linkedin.com/in/vinay-dandinashivara-90258a1a/" title="LinkedIn"
+                            (mouseenter)="toggleTooltip('linkedin')" (mouseleave)="toggleTooltip('linkedin')">
+                            <i class="fa-brands fa-linkedin fa-2xl"></i>
+                        </a>
+                        <span [@toggleTooltip]="follow_tooltip_state.get('linkedin')" class="follow-tooltip d-none d-lg-block d-xl-block">Connect
+                            with me on LinkedIn.</span>
+                    </span>
+                </div>
+                <div class="col col-md-3 col-lg-12">
+                    <span class="follow-logo">
+                        <a href="https://medium.com/@vinay_dandinashivara" title="Medium.com"
+                            (mouseenter)="toggleTooltip('medium')" (mouseleave)="toggleTooltip('medium')">
+                            <i class="fa-brands fa-medium fa-2xl"></i>
+                        </a>
+                        <span [@toggleTooltip]="follow_tooltip_state.get('medium')" class="follow-tooltip d-none d-lg-block d-xl-block ">Connect with
+                            me on medium.com.</span>
+                    </span>
+                </div>
+
+                <div class="col col-md-3 col-lg-12">
+                    <span class="follow-logo">
+                        <a href="https://github.com/dgvinay/" title="Github" (mouseenter)="toggleTooltip('github')"
+                            (mouseleave)="toggleTooltip('github')">
+                            <i class="fa-brands fa-github fa-2xl"></i>
+                        </a>
+                        <span [@toggleTooltip]="follow_tooltip_state.get('github')" class="follow-tooltip d-none d-lg-block d-xl-block">Connect with me on
+                            github!</span>
+                    </span>
+                </div>
+                <div class="col col-md-3 col-lg-12">
+                    <span class="follow-logo">
+                        <a href="https://www.instagram.com/vinay.dg/" title="Instagram"
+                            (mouseenter)="toggleTooltip('instagram')" (mouseleave)="toggleTooltip('instagram')">
+                            <i class="fa-brands fa-instagram fa-2xl"></i></a>
+                        <span [@toggleTooltip]="follow_tooltip_state.get('instagram')" class="follow-tooltip d-none d-lg-block d-xl-block">Connect
+                            with me on instagram.</span>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
