@@ -45,4 +45,4 @@ jobs:
       # 6. Copy to S3 bucket.
       - name: Copy to S3 Bucket
         run: |
-          aws s3 cp ./dist/* s3://467490934638-test
+          aws s3 cp ./dist/* s3://467490934638-test --recursive
