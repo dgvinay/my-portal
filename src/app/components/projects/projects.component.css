@@ -66,4 +66,5 @@
     margin-top: 5px;
     max-width: fit-content;
     font-size: 10pt;
+    overflow: hidden;
 }

@@ -79,7 +79,7 @@
     text-align: justify;
 }
 
-.experience-card-responsibilities li{
+.experience-card-responsibilities li {
     list-style-type: circle;
 }
 
@@ -102,6 +102,7 @@
     margin: 3px;
     margin-top: 5px;
     max-width: fit-content;
+    overflow: hidden;
 }
 
 .experience-card-tech-stack-pill:hover {

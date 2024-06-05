@@ -5,7 +5,8 @@
 
 .about-me-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .content-box {
@@ -14,7 +15,7 @@
     border-radius: 20px;
     margin: 10px 10px 20px 20px;
     font-size: 11pt;
-    width: 100%;
+    width: 70%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -29,7 +30,6 @@
 .content-box-small {
     max-height: 320px;
     max-width: 235px;
-    width: 100%;
 }
 
 .content-box img {
