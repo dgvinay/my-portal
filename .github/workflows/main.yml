@@ -16,9 +16,9 @@ jobs:
     steps:
       #1. Configure AWS Credentials
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
-          role-to-assume: ${{env.ASSUMEROLEARN}}
+          role-to-assume: ${{ env.ASSUME_ROLE_ARN }}
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
       
