@@ -1,5 +1,24 @@
 :host {
     width: 100%;
+    border-bottom: 1px solid rgb(31, 30, 30);
+}
+
+.header-content {
+    display: grid;
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+    .header-content {
+        justify-content: unset;
+    }
+}
+
+.navbar {
+    justify-self: center;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .header-content .bg-dark {
