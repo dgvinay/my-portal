@@ -1,3 +1,6 @@
+:host {
+    width: 100%;
+}
 
 .header-content .bg-dark {
     background-color: black !important;
@@ -16,6 +19,18 @@
     background-color: rgb(32, 30, 30);
 }
 
-.navbar, .navbar-brand {
-    padding:0px;
+.navbar,
+.navbar-brand {
+    padding: 0px;
+    justify-content: center;
+}
+
+.navbar-small {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-small .header-logo {
+    min-width: 50px;
 }

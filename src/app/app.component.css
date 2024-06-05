@@ -12,7 +12,7 @@
 
 
 .header-area {
-    display: grid;
+    display: flex;
     vertical-align: top;
     color: white;
     align-items: center;
