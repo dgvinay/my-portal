@@ -5,6 +5,10 @@ on: workflow_dispatch
 env:
   AWS_REGION : "us-east-1"
 
+permissions:
+    id-token: write   # This is required for requesting the JWT
+    contents: read 
+
 jobs:
   Build_and_Deploy_Portal:
     runs-on: ubuntu-latest
@@ -12,7 +16,7 @@ jobs:
     steps:
       #1. Configure AWS Credentials
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{env.ASSUMEROLEARN}}
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
