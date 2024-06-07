@@ -2,6 +2,10 @@ name: Portal Deployment
 
 on: workflow_dispatch
 
+permissions:
+    id-token: write   # This is required for requesting the JWT
+    contents: read 
+
 jobs:
   Build_Code:
     runs-on: ubuntu-latest
