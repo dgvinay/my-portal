@@ -2,39 +2,25 @@ name: Portal Deployment
 
 on: workflow_dispatch
 
-env:
-  AWS_REGION : "us-east-1"
-
-permissions:
-    id-token: write   # This is required for requesting the JWT
-    contents: read 
-
 jobs:
-  Build_and_Deploy_Portal:
+  Build_Code:
     runs-on: ubuntu-latest
-    name: Portal - Build & Deploy
+    environment: production
+    name: Portal - Build
     steps:
-      #1. Configure AWS Credentials
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1.7.0
-        with:
-          role-to-assume: arn:aws:iam::467490934638:role/GitHubAction-AssumeRoleWithAction
-          role-session-name: GitHub_to_AWS_via_FederatedOIDC
-          aws-region: ${{ env.AWS_REGION }}
-      
-      #2. Checkout
+      #1. Checkout
       - name: Checkout
         uses: actions/checkout@v3
         with:
           ref: main
 
-      #3. Setup Node
+      #2. Setup Node
       - name: Setup NodeJs 
         uses: actions/setup-node@v3
         with:
           node-version: '20.12.2'
 
-      # 5. Build Angular
+      # 3. Build Angular
       - name: Build Angular Application
         run: |
           ls
@@ -42,7 +28,36 @@ jobs:
           npm install
           ng build --configuration production
 
-      # 6. Copy to S3 bucket.
+      #4. Upload Build Artifact
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: my-portal-artifact
+            path: ./dist/
+            retention-days: 7
+            overwrite: true
+
+  Deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    name: Portal - Deploy
+    steps:
+      #1. Configure AWS Credentials
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          role-to-assume: ${{ secrets.ASSUME_ROLE_ARN }}
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: ${{ env.AWS_REGION }}
+
+      #2. Download the artifact
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with: 
+          name: my-portal-artifact
+          path: ./dist/
+          
+      #3. Copy to S3 bucket.
       - name: Copy to S3 Bucket
         run: |
-          aws s3 sync ./dist/my-portal/browser/ s3://467490934638-test
+          aws s3 sync ./dist/my-portal/browser/ ${{ secrets.PORTFOLIO_S3_BUCKET_URL }}
