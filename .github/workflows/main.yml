@@ -41,16 +41,17 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     name: Portal - Deploy
+    needs: Build_Code
     steps:
       #1. Configure AWS Credentials
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
-          role-to-assume: ${{ secrets.ASSUME_ROLE_ARN }}
+          role-to-assume: ${{ vars.ASSUME_ROLE_ARN }}
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
-          aws-region: ${{ env.AWS_REGION }}
+          aws-region: ${{ vars.AWS_REGION }}
 
-      #2. Download the artifact
+      #2. Download the artefact
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with: 
