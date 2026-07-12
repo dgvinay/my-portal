@@ -30,6 +30,7 @@ jobs:
           ls
           npm install -g @angular/cli
           npm install
+          npm audit --audit-level=moderate || true
           ng build --configuration production
 
       #4. Upload Build Artifact
