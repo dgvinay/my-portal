@@ -1,0 +1,116 @@
+{
+  "experiences": [
+    {
+      "companyName": "Persistent Systems Limited",
+      "designation": "Architect",
+      "duration": "June 2021 - Present",
+      "startYear": 2021,
+      "endYear": 2024,
+      "technologyStack": [
+        "AWS",
+        "Asp.Net Core",
+        "AWS Lambda Functions",
+        "AWS S3",
+        "RDS",
+        "DynamoDB",
+        "EKS",
+        "CloudFront",
+        "Web API",
+        "Lambda@Edge",
+        "Auth0",
+        "Token Authentication"
+      ],
+      "responsibilities": [
+        "Designed the system for importing media files from on-premises storage into S3 and making them available for download and streaming using CloudFront.",
+        "Designed the process for making the media files available for streaming using AWS Elemental media convert service.",
+        "Designed the security for serving the file using the Lambda@Edge. Implemented token-based authentication and Audit Trail mechanism.",
+        "Designed and implemented API to upload files and process (virus scanning, metadata extraction) them asynchronously before making them available for download or streaming.",
+        "Hosted the Upload API as a Microservice on the EKS deployed using Azure DevOps and helm charts.",
+        "Written a whitepaper and POC for creating CDN using CloudFront with origin as S3 buckets."
+      ]
+    },
+    {
+      "companyName": "Aurigo Software Technologies Private Limited",
+      "designation": "Engineering Lead",
+      "duration": "August 2013 - June 2021",
+      "startYear": 2013,
+      "endYear": 2021,
+      "technologyStack": [
+        ".Net Core",
+        "Asp.Net Core",
+        "Entity Framework Core",
+        "MS SQL",
+        "AWS S3",
+        "DynamoDB",
+        "ASP.NET",
+        ".Net Framework",
+        "IdentityServer4",
+        "JavaScript",
+        "jQuery",
+        "KendoJS",
+        "Bootstrap",
+        "Telerik Controls",
+        "Web API",
+        "Token Authentication"
+      ],
+      "responsibilities": [
+        "Led a team of 4 or more people.",
+        "Implementation of DI (partially) in the monolithic application.",
+        "Analyze the change impact on the product and intimate the product stakeholders.",
+        "Designing & implementing new modules in the product.",
+        "Review and repair legacy code.",
+        "Training and guiding new employees joining the organization.",
+        "Integration with other software like Documentum, DocuSign, Primavera, etc.",
+        "Worked on the initial implementation of the hybrid mobile app using Kendo Mobile controls, JavaScript, and Web API.",
+        "Participate in the design discussions.",
+        "Implementing the features of Masterworks to work with the new service.",
+        "Implementation of migration utility to move the existing documents to the S3 bucket.",
+        "Implementation of logging using the serilog library."
+      ]
+    },
+    {
+      "companyName": "Sabre Travel Technologies Private Limited",
+      "designation": "Associate Software Developer",
+      "duration": "April 2011 - June 2013",
+      "startYear": 2011,
+      "endYear": 2013,
+      "technologyStack": [
+        "MS SQL",
+        "ASP.NET",
+        "ASP.NET Web Forms",
+        ".Net Framework",
+        "JavaScript",
+        "Web API"
+      ],
+      "responsibilities": [
+        "Work on the development and implementation projects, features, and enhancements.",
+        "Actively work and debug issues raised by stakeholders and participate in the maintenance activities of the modules.",
+        "Handle product deployment and project releases.",
+        "Participate in design discussion and project level update meetings."
+      ]
+    },
+    {
+      "companyName": "Shawman Software Private Limited",
+      "designation": "Junior Software Developer",
+      "duration": "February 2010 - April 2011",
+      "startYear": 2010,
+      "endYear": 2011,
+      "technologyStack": [
+        "MS SQL",
+        "ASP.NET",
+        "ASP.NET Web Forms",
+        ".Net Framework 1.1 / 2.0 / 3.5",
+        "JavaScript",
+        "Ajax",
+        "VB.NET"
+      ],
+      "responsibilities": [
+        "MIS reports for Material Management system - involved in understanding requirements, designing UI, and coding report generation.",
+        "Material Management System with batch logic - involved in redesigning the module to incorporate Batch Logic, interacting with management.",
+        "Contact Management System - involved in understanding functional requirements by interacting with clients and management, development.",
+        "Assessment Square - interacting with client for functional requirements, resolving bugs, handled deployment.",
+        "Retail POS - interacting with client for module requirements, resolving bugs, designing new modules."
+      ]
+    }
+  ]
+}
