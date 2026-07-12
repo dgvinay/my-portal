@@ -1,9 +1,30 @@
 {
   "experiences": [
     {
+      "companyName": "Planview India Pvt. Ltd.",
+      "designation": "Principal Software Engineer",
+      "duration": "April 2025 - Present",
+      "startYear": 2021,
+      "endYear": 2024,
+      "technologyStack": [
+        "AI Engineering",
+        "Asp.Net Core",
+        ".Net 6.0",
+        ".Net 10",
+        "Containerization",
+        "Microservices"
+      ],
+      "responsibilities": [
+        "Worked on building an autonomous AI agent to work on the codebases.",
+        "Worked on modernising the legacy codebase written in ASP.Net using .Net 4.8.",
+        "Designed the UI architecture to implement React-based components in the classic asp.NET UI.",
+        "Worked on APIfying the code so that it can be used with the React components."
+      ]
+    },
+    {
       "companyName": "Persistent Systems Limited",
       "designation": "Architect",
-      "duration": "June 2021 - Present",
+      "duration": "June 2021 - April 2025",
       "startYear": 2021,
       "endYear": 2024,
       "technologyStack": [
