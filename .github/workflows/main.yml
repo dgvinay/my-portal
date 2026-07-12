@@ -22,7 +22,7 @@ jobs:
       - name: Setup NodeJs 
         uses: actions/setup-node@v3
         with:
-          node-version: '20.12.2'
+          node-version: '24'
 
       # 3. Build Angular
       - name: Build Angular Application
