@@ -1,5 +1,5 @@
 import { NgFor, NgStyle } from '@angular/common';
-import { Component, ElementRef, Input } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, Input } from '@angular/core';
 import { IWorkExperience } from '../../interfaces/work-experience';
 
 @Component({
@@ -10,26 +10,30 @@ import { IWorkExperience } from '../../interfaces/work-experience';
   styleUrl: './experience-card.component.css'
 })
 
-export class ExperienceCardComponent {
+export class ExperienceCardComponent implements AfterViewChecked {
   vlineHeight = '0px';
-  vlineTop = '0px';
 
   @Input() exp!: IWorkExperience;
 
   constructor(private elRef: ElementRef) {}
 
-  ngAfterContentChecked() {
+  ngAfterViewChecked() {
     this.updateVline();
   }
 
   updateVline() {
-    var endYear = $(this.elRef.nativeElement).find(".experience-card-end-year");
-    var startYear = $(this.elRef.nativeElement).find(".experience-card-start-year");
+    const nativeEl = this.elRef.nativeElement as HTMLElement;
+    const endYear = nativeEl.querySelector('.experience-card-end-year') as HTMLElement | null;
+    const startYear = nativeEl.querySelector('.experience-card-start-year') as HTMLElement | null;
 
-    var endYearBottom = endYear.position().top;
-    endYearBottom += endYear.outerHeight() ?? endYear.height() ?? 0;
-    var startYearTop = startYear.position().top;
+    if (!endYear || !startYear) {
+      this.vlineHeight = '0px';
+      return;
+    }
 
-    this.vlineHeight = (startYearTop - endYearBottom) + "px";
+    const endYearBottom = endYear.offsetTop + endYear.offsetHeight;
+    const startYearTop = startYear.offsetTop;
+
+    this.vlineHeight = `${Math.max(0, startYearTop - endYearBottom)}px`;
   }
 }

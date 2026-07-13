@@ -70,6 +70,8 @@ npm run test  # or yarn test
 - Preserve theme state across browser sessions; selected light/dark mode should persist on reload
 - Use theme-specific assets and styling so light theme logos, navbar toggles, and carousel controls remain visible and blend with the page background
 - Mobile header behavior should keep the theme toggle visible outside the collapsible menu and allow the menu to push content down rather than overlay it
+- Do not use jQuery for Angular component logic. Angular templates, data binding, and native DOM APIs are preferred.
+- Copilot and other AI agents should treat this repository as a no-jQuery Angular codebase unless legacy scripts explicitly require it.
 
 ## Validation Pipeline
 
