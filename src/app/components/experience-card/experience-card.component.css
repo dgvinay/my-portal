@@ -8,6 +8,9 @@
     box-shadow: 0px 0px 9px 7px rgba(168, 159, 159, 0.2);
     border-radius: 20px;
     margin-top: 50px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-card-year-block {
@@ -18,28 +21,35 @@
 }
 
 .experience-card-end-year {
-    border: 1px grey solid;
+    border: 1px solid var(--border-color);
     border-radius: 50%;
     width: 70px;
     height: 70px;
     text-align: center;
     padding-top: 16px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .experience-card-start-year {
-    border: 1px grey solid;
+    border: 1px solid var(--border-color);
     border-radius: 50%;
     width: 70px;
     height: 70px;
     text-align: center;
     padding-top: 16px;
     align-self: center;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .experience-card-vertical-line {
     width: 1px;
-    background-color: grey;
+    background-color: var(--border-color);
     position: relative;
+    transition: background-color 0.3s ease;
 }
 
 .experience-card-details-block {
@@ -97,7 +107,10 @@
     padding-bottom: 3px;
     padding-right: 10px;
     padding-left: 10px;
-    border: 1px solid grey;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     max-height: 30px;
     margin: 3px;
     margin-top: 5px;

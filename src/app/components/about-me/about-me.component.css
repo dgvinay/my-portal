@@ -10,21 +10,25 @@
 }
 
 .content-box {
-    border: 1px solid rgb(105, 103, 103);
+    border: 1px solid var(--border-color);
     padding: 10px;
     border-radius: 20px;
     margin: 10px 10px 20px 20px;
     font-size: 11pt;
     width: 70%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .content-box-header {
     padding: 5px;
     justify-content: center;
     display: grid;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 20px;
+    transition: border-color 0.3s ease;
 }
 
 .content-box-small {

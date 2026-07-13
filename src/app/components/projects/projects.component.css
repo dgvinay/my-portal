@@ -17,23 +17,27 @@
 
 .project-card {
     width: 40%;
-    border: 1px solid grey;
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
     min-height: 300px;
     min-width: 300px;
     position: relative;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card-header {
     font-size: 14pt;
-    border-bottom: 1px solid grey;;
+    border-bottom: 1px solid var(--border-color);
     padding: 5px 0px 5px 0px;
+    transition: border-color 0.3s ease;
 }
 
 .project-card-footer {
-    border-top: 1px solid grey;
+    border-top: 1px solid var(--border-color);
     position: absolute;
     justify-self: center;
     bottom: 0;
@@ -41,6 +45,7 @@
     width: 94%;
     min-height: 30px;
     padding: 5px 0px 5px 0px;
+    transition: border-color 0.3s ease;
 }
 
 .project-card-description {
@@ -60,11 +65,14 @@
     padding-bottom: 3px;
     padding-right: 10px;
     padding-left: 10px;
-    border: 1px solid grey;
+    border: 1px solid var(--border-color);
     max-height: 30px;
     margin: 3px;
     margin-top: 5px;
     max-width: fit-content;
     font-size: 10pt;
     overflow: hidden;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
