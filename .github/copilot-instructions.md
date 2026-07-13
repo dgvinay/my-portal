@@ -67,6 +67,9 @@ npm run test  # or yarn test
 - Follow responsive design principles for UI changes
 - Ensure accessibility standards are met
 - Keep bundle size optimized
+- Preserve theme state across browser sessions; selected light/dark mode should persist on reload
+- Use theme-specific assets and styling so light theme logos, navbar toggles, and carousel controls remain visible and blend with the page background
+- Mobile header behavior should keep the theme toggle visible outside the collapsible menu and allow the menu to push content down rather than overlay it
 
 ## Validation Pipeline
 
