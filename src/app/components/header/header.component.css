@@ -56,10 +56,26 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
 }
 
 .navbar-small .header-logo {
     min-width: 50px;
+}
+
+.navbar-small-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+}
+
+.navbar-small-title {
+    padding-top: 10px;
+    flex: 1;
+    min-width: 0;
+    color: var(--navbar-text);
+    font-size: 0.95rem;
 }
 
 /* Theme Toggle Styles */
@@ -123,5 +139,38 @@
     .navbar {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .navbar-small {
+        align-items: center;
+    }
+
+    .navbar-small-title {
+        padding-top: 10px;
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: var(--navbar-text);
+        font-size: 0.95rem;
+    }
+
+    .navbar-small-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+    }
+
+    .navbar-small-actions button {
+        flex: 0 0 auto;
+    }
+
+    .small-theme-btn {
+        padding: 0.5rem;
+        background: none;
+        border: none;
+        color: var(--navbar-text);
     }
 }
