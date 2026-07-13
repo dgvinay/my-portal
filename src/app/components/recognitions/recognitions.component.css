@@ -42,6 +42,20 @@
 
 .carousel-caption {
     position: static;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    width: 100%;
+    max-width: 700px;
+    margin: 1rem auto 0;
+    text-align: center;
+}
+
+:host-context([data-theme="light"]) .carousel-caption {
+    background: rgba(245, 245, 245, 0.85);
+    color: #111111;
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .carousel-caption h4 {
@@ -51,6 +65,20 @@
 .carousel-caption p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 9pt;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent !important;
+    filter: invert(0);
+    width: 2.25rem;
+    height: 2.25rem;
+    background-size: 2.25rem 2.25rem;
+}
+
+:host-context([data-theme="light"]) .carousel-control-prev-icon,
+:host-context([data-theme="light"]) .carousel-control-next-icon {
+    filter: invert(1);
 }
 
 @media (min-width: 768px) {

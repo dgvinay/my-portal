@@ -6,15 +6,16 @@
     padding-left: 1rem;
     padding-top: 1rem;
     position: relative;
-    margin-top: 10%;
+    margin-top: 1rem;
     height: 100%;
+    color: var(--text-color);
 }
 
 
 .header-area {
     display: flex;
     vertical-align: top;
-    color: white;
+    color: var(--text-color);
     align-items: center;
     justify-content: center;
     justify-self: center;
@@ -22,6 +23,9 @@
     top: 0px;
     padding: 0px !important;
     width: 100%;
-    border-bottom: 1px solid rgb(31, 30, 30);
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
+
 

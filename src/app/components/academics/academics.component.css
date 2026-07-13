@@ -20,15 +20,19 @@
 
 .divider {
     height: 1px;
-    background-color: grey;
+    background-color: var(--border-color);
     width: 100%;
+    transition: background-color 0.3s ease;
 }
 
 .certificate-container {
     display: flex;
-    border: 1px solid grey;
+    border: 1px solid var(--border-color);
     border-radius: 2rem;
     padding: 10px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .certificate-logo {
@@ -52,9 +56,12 @@
 
 .education-container {
     display: flex;
-    border: 1px solid grey;
+    border: 1px solid var(--border-color);
     border-radius: 2rem;
     padding: 15px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .education-logo {

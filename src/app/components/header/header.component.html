@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark">
         <div class="d-none d-lg-block">
             <a class="navbar-brand d-none d-lg-block d-xl-block header-logo" routerLink="">
-                <img class="img-fluid" src="../../assets/images/logo-white-small.png">
+                <img class="img-fluid" [src]="currentTheme === 'light' ? '../../assets/images/logo-black-small.png' : '../../assets/images/logo-white-small.png'" alt="Vinay logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -12,14 +12,20 @@
         </div>
         <div class="navbar-small d-lg-none d-xl-none">
             <a class="navbar-brand d-sm-block d-md-block d-lg-none d-xl-none header-logo" href="#">
-                <img class="img-fluid" src="../../assets/images/logo-white-xtra-small.png">
+                <img class="img-fluid" [src]="currentTheme === 'light' ? '../../assets/images/logo-black-xtra-small.png' : '../../assets/images/logo-white-xtra-small.png'" alt="Vinay logo">
             </a>
-            <span style="padding-top: 10px;">Vinay Dandinashivara</span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="navbar-small-title">Vinay Dandinashivara</span>
+            <div class="navbar-small-actions">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button class="theme-toggle-btn small-theme-btn" (click)="toggleTheme()" [attr.aria-label]="'Switch to ' + (currentTheme === 'light' ? 'dark' : 'light') + ' theme'">
+                    <span *ngIf="currentTheme === 'dark'" class="theme-icon">☀️</span>
+                    <span *ngIf="currentTheme === 'light'" class="theme-icon">🌙</span>
+                </button>
+            </div>
         </div>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -38,6 +44,12 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLink="projects" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Projects</a>
+                </li>
+                <li class="nav-item theme-toggle-item d-none d-lg-flex">
+                    <button class="theme-toggle-btn" (click)="toggleTheme()" [attr.aria-label]="'Switch to ' + (currentTheme === 'light' ? 'dark' : 'light') + ' theme'">
+                        <span *ngIf="currentTheme === 'dark'" class="theme-icon">☀️</span>
+                        <span *ngIf="currentTheme === 'light'" class="theme-icon">🌙</span>
+                    </button>
                 </li>
             </ul>
         </div>
